@@ -6,7 +6,7 @@ var exports {.importc.}: js
 
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
   var
-    name = event.queryStringParameters["name"].to(string)
+    name = event.queryStringParameters.name.to(string)
   if name == "":
     name = "World"
 
