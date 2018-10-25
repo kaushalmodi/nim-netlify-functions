@@ -235,27 +235,27 @@ function nimCopyAux(dest_322635, src_322636, n_322638) {
 }
 async function HEX3Aanonymous_463055(event_463057, context_463058) {
 
-		function inner_463114() {
-			var result_463116 = null;
+		function inner_463126() {
+			var result_463128 = null;
 
 			var F={procname:":anonymous.inner",prev:framePtr,filename:"../../../../../stow/pkgs/nim/devel/lib/js/jsffi.nim",line:0};
 			framePtr = F;
 			BeforeRet: do {
 				F.line = 423;
-				var a_463117 = null;
+				var a_463129 = null;
 				F.line = 424;
-				a_463117 = {};
+				a_463129 = {};
 				F.line = 434;
-				a_463117.statusCode = 200;
+				a_463129.statusCode = 200;
 				F.line = 434;
-				a_463117.body = toJSStr((makeNimstrLit("Hello, ")).concat(name_463090,makeNimstrLit("! From Nim.")));
+				a_463129.body = toJSStr((makeNimstrLit("Hello, ")).concat(name_463102,makeNimstrLit("! From Nim.")));
 				F.line = 443;
-				result_463116 = a_463117;
+				result_463128 = a_463129;
 				break BeforeRet;
 			} while (false);
 			framePtr = F.prev;
 
-			return result_463116;
+			return result_463128;
 
 		}
 
@@ -265,14 +265,14 @@ async function HEX3Aanonymous_463055(event_463057, context_463058) {
 	framePtr = F;
 	BeforeRet: do {
 		F.line = 9;
-		var name_463090 = (event_463057["queryStringParameters"]["name"]);
-		if (eqStrings(name_463090, [])) {
+		var name_463102 = (event_463057.queryStringParameters["name"]);
+		if (eqStrings(name_463102, [])) {
 		F.line = 11;
-		name_463090 = nimCopy(null, makeNimstrLit("World"), NTI305040);
+		name_463102 = nimCopy(null, makeNimstrLit("World"), NTI305040);
 		}
 		
 		F.line = 13;
-		result_463069 = inner_463114();
+		result_463069 = inner_463126();
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
