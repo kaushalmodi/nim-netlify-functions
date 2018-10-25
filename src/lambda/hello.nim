@@ -5,5 +5,5 @@ var exports {.importc.}: js
 exports.handler = proc(event: js, context: js, callback: proc(n: js, obj: js)) =
   callback(nil, js{
     statusCode: 200,
-    body: cstring"Hello, World"}
+    body: "Hello, World! From Nim."}
   )

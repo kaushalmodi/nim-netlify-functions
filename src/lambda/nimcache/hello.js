@@ -12,6 +12,18 @@ if (typeof Uint16Array === 'undefined') Uint16Array = Array;
 if (typeof Uint32Array === 'undefined') Uint32Array = Array;
 if (typeof Float32Array === 'undefined') Float32Array = Array;
 if (typeof Float64Array === 'undefined') Float64Array = Array;
+
+function makeNimstrLit(c_178624) {
+		  var ln = c_178624.length;
+  var result = new Array(ln);
+  for (var i = 0; i < ln; ++i) {
+    result[i] = c_178624.charCodeAt(i);
+  }
+  return result;
+  
+
+	
+}
 var nimvm_169578 = false;
 var nim_program_result = 0;
 var global_raise_hook_175818 = [null];
@@ -42,7 +54,7 @@ function HEX3Aanonymous_319015(event_319017, context_319018, callback_319023) {
 				F.line = 434;
 				a_319048.statusCode = 200;
 				F.line = 434;
-				a_319048.body = "Hello, World";
+				a_319048.body = makeNimstrLit("Hello, World! From Nim.");
 				F.line = 443;
 				result_319047 = a_319048;
 				break BeforeRet;
@@ -55,7 +67,7 @@ function HEX3Aanonymous_319015(event_319017, context_319018, callback_319023) {
 
 	var F={procname:"hello.:anonymous",prev:framePtr,filename:"hello.nim",line:0};
 	framePtr = F;
-		F.line = 5;
+		F.line = 6;
 		callback_319023(null, inner_319045());
 	framePtr = F.prev;
 
