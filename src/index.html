@@ -40,23 +40,26 @@
             <p><a href="/.netlify/functions/hello_async">Say hello!</a></p>
         </article>
 
-        <!--
-             <article>
-             <h2>Hello, {name}</h2>
-             <p>
-             Customize the greeting calling the Lambda endpoint with an optional
-             <code>name</code> parameter.
-             </p>
-             <pre class="language-js"><code><%= require('html-loader!./lambda/hello_name.js') %></code></pre>
-             <h3>Try it out</h3>
-             <form action="/.netlify/functions/hello_name">
-             <p>
-             <label>What’s your name?<br/><input type="text" name="name"></label>
-             </p>
-             <p><button type="submit">Say hello!</button></p>
-             </form>
-             </article>
+        <article>
+            <h2>Hello, {name}</h2>
+            <p>
+                Customize the greeting calling the Lambda endpoint with an optional
+                <code>name</code> parameter.
+            </p>
+            <ul>
+                <li><a href="/lambda/hello_name.nim">Source Nim code</a></li>
+                <li><a href="/lambda/nimcache/hello_name.js">JS generated from Nim code</a></li>
+            </ul>
+            <h3>Try it out</h3>
+            <form action="/.netlify/functions/hello_name">
+                <p>
+                    <label>What’s your name?<br/><input type="text" name="name"></label>
+                </p>
+                <p><button type="submit">Say hello!</button></p>
+            </form>
+        </article>
 
+        <!--
              <article>
              <h2>Hello, {name} (POST version)</h2>
              <p>Let’s make sure we only process POST requests for our customized greeting.</p>
