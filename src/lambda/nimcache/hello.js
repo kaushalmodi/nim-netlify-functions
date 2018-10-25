@@ -13,22 +13,22 @@ if (typeof Uint32Array === 'undefined') Uint32Array = Array;
 if (typeof Float32Array === 'undefined') Float32Array = Array;
 if (typeof Float64Array === 'undefined') Float64Array = Array;
 
-function makeNimstrLit(c_178624) {
-		  var ln = c_178624.length;
+function makeNimstrLit(c_321624) {
+		  var ln = c_321624.length;
   var result = new Array(ln);
   for (var i = 0; i < ln; ++i) {
-    result[i] = c_178624.charCodeAt(i);
+    result[i] = c_321624.charCodeAt(i);
   }
   return result;
   
 
 	
 }
-var nimvm_169578 = false;
+var nimvm_312578 = false;
 var nim_program_result = 0;
-var global_raise_hook_175818 = [null];
-var local_raise_hook_175823 = [null];
-var out_of_mem_hook_175826 = [null];
+var global_raise_hook_318818 = [null];
+var local_raise_hook_318823 = [null];
+var out_of_mem_hook_318826 = [null];
   if (!Math.trunc) {
     Math.trunc = function(v) {
       v = +v;
@@ -37,40 +37,40 @@ var out_of_mem_hook_175826 = [null];
       return (v - v % 1)   ||   (v < 0 ? -0 : v === 0 ? v : 0);
     };
   }
-var object_id_303245 = [0];
+var object_id_446245 = [0];
 
-function HEX3Aanonymous_319015(event_319017, context_319018, callback_319023) {
+function HEX3Aanonymous_462015(event_462017, context_462018, callback_462023) {
 
-		function inner_319045() {
-			var result_319047 = null;
+		function inner_462045() {
+			var result_462047 = null;
 
 			var F={procname:":anonymous.inner",prev:framePtr,filename:"../../../../../stow/pkgs/nim/devel/lib/js/jsffi.nim",line:0};
 			framePtr = F;
 			BeforeRet: do {
 				F.line = 423;
-				var a_319048 = null;
+				var a_462048 = null;
 				F.line = 424;
-				a_319048 = {};
+				a_462048 = {};
 				F.line = 434;
-				a_319048.statusCode = 200;
+				a_462048.statusCode = 200;
 				F.line = 434;
-				a_319048.body = makeNimstrLit("Hello, World! From Nim.");
+				a_462048.body = makeNimstrLit("Hello, World! From Nim.");
 				F.line = 443;
-				result_319047 = a_319048;
+				result_462047 = a_462048;
 				break BeforeRet;
 			} while (false);
 			framePtr = F.prev;
 
-			return result_319047;
+			return result_462047;
 
 		}
 
 	var F={procname:"hello.:anonymous",prev:framePtr,filename:"hello.nim",line:0};
 	framePtr = F;
 		F.line = 6;
-		callback_319023(null, inner_319045());
+		callback_462023(null, inner_462045());
 	framePtr = F.prev;
 
 	
 }
-exports.handler = HEX3Aanonymous_319015;
+exports.handler = HEX3Aanonymous_462015;
