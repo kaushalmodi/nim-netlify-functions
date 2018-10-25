@@ -1,0 +1,12 @@
+* Netlify Functions examples
+
+Hi there! This is a playground repo to test out
+[[https://www.netlify.com/docs/functions][Netlify's Lambda Functions]].
+You can see a live demo of the examples at
+https://functions-playground.netlify.com.
+* Nim source code
+The Nim source code is in the [[./src/lambda][*src/lambda*]] directory.
+* Generate JS code
+To generate the JS code, ~cd~ to that directory and do ~nim genJS~.
+
+The JS code will be generated in ~src/lambda/nimcache~.
