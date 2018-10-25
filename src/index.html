@@ -19,7 +19,6 @@
         <article>
             <h2>Hello, World!</h2>
             <p>The inevitable Hello World example.</p>
-            <!-- <pre class="language-js"><code><%= require('html-loader!./lambda/hello.js') %></code></pre> -->
             <ul>
                 <li><a href="/lambda/hello.nim">Source Nim code</a></li>
                 <li><a href="/lambda/nimcache/hello.js">JS generated from Nim code</a></li>
@@ -27,18 +26,21 @@
             <h3>Try it out</h3>
             <p><a href="/.netlify/functions/hello">Say hello!</a></p>
         </article>
-        <!--
-             <article>
-             <h2>Hello, World! (async version)</h2>
-             <p>
-             The Hello World example can get sweeter with some async syntactic sugar.
-             With async, we can return the response instead of dealing with callbacks.
-             </p>
-             <pre class="language-js"><code><%= require('html-loader!./lambda/hello_async.js') %></code></pre>
-             <h3>Try it out</h3>
-             <p><a href="/.netlify/functions/hello_async">Say hello!</a></p>
-             </article>
+        <article>
+            <h2>Hello, World! (async version)</h2>
+            <p>
+                The Hello World example can get sweeter with some async syntactic sugar.
+                With async, we can return the response instead of dealing with callbacks.
+            </p>
+            <ul>
+                <li><a href="/lambda/hello_async.nim">Source Nim code</a></li>
+                <li><a href="/lambda/nimcache/hello_async.js">JS generated from Nim code</a></li>
+            </ul>
+            <h3>Try it out</h3>
+            <p><a href="/.netlify/functions/hello_async">Say hello!</a></p>
+        </article>
 
+        <!--
              <article>
              <h2>Hello, {name}</h2>
              <p>
