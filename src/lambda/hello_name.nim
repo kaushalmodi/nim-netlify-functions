@@ -6,13 +6,13 @@ var exports {.importc.}: js
 
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
   var
-    name = event.queryStringParameters.name.to(string)
-  if name == "":
-    name = "World"
+    name = event.queryStringParameters.name.to(cstring)
+  if name == cstring"":
+    name = cstring"World"
 
   return js{
     statusCode: 200,
-    body: cstring("Hello, " & name & "! From Nim.")
+    body: cstring"Hello, " & name & cstring"! From Nim."
     }
 
 # https://nim-lang.org/docs/asyncjs.html
