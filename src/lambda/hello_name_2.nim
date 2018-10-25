@@ -6,7 +6,8 @@ var exports {.importc.}: js
 
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
   var
-    name: string = event.queryStringParameters.name.to(string)
+    # https://gitter.im/nim-lang/Nim?at=5bd24373069fca52a5945a0b
+    name: string = $(event.queryStringParameters.name.to(cstring))
   if name == "":
     name = "World"
 

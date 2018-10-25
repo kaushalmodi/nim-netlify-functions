@@ -14,6 +14,45 @@ if (typeof Float32Array === 'undefined') Float32Array = Array;
 if (typeof Float64Array === 'undefined') Float64Array = Array;
 var NTI305040 = {size: 0,kind: 28,base: null,node: null,finalizer: null};
 
+function cstrToNimstr(c_321641) {
+		  var ln = c_321641.length;
+  var result = new Array(ln);
+  var r = 0;
+  for (var i = 0; i < ln; ++i) {
+    var ch = c_321641.charCodeAt(i);
+
+    if (ch < 128) {
+      result[r] = ch;
+    }
+    else {
+      if (ch < 2048) {
+        result[r] = (ch >> 6) | 192;
+      }
+      else {
+        if (ch < 55296 || ch >= 57344) {
+          result[r] = (ch >> 12) | 224;
+        }
+        else {
+            ++i;
+            ch = 65536 + (((ch & 1023) << 10) | (c_321641.charCodeAt(i) & 1023));
+            result[r] = (ch >> 18) | 240;
+            ++r;
+            result[r] = ((ch >> 12) & 63) | 128;
+        }
+        ++r;
+        result[r] = ((ch >> 6) & 63) | 128;
+      }
+      ++r;
+      result[r] = (ch & 63) | 128;
+    }
+    ++r;
+  }
+  return result;
+  
+
+	
+}
+
 function eqStrings(a_321853, b_321854) {
 		    if (a_321853 == b_321854) return true;
     if (a_321853 === null && b_321854.length == 0) return true;
@@ -264,14 +303,14 @@ async function HEX3Aanonymous_463055(event_463057, context_463058) {
 	var F={procname:"hello_name_2.:anonymous",prev:framePtr,filename:"hello_name_2.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 9;
-		var name_463107 = (event_463057.queryStringParameters.name);
+		F.line = 10;
+		var name_463107 = cstrToNimstr((event_463057.queryStringParameters.name));
 		if (eqStrings(name_463107, [])) {
-		F.line = 11;
+		F.line = 12;
 		name_463107 = nimCopy(null, makeNimstrLit("World"), NTI305040);
 		}
 		
-		F.line = 13;
+		F.line = 14;
 		result_463069 = inner_463131();
 		break BeforeRet;
 	} while (false);
