@@ -1,4 +1,4 @@
 [build]
-  command = "yarn build"
-  publish = "dist/client"
-  functions = "dist/server"
+  command = "./build.sh"
+  publish = "public"
+  functions = "./src/lambda"    # directory containing the .js files
