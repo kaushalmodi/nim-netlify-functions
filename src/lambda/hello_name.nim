@@ -6,13 +6,19 @@ var exports {.importc.}: js
 
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
   var
-    name = event.queryStringParameters.name.to(cstring)
-  if name == cstring"":
-    name = cstring"World"
+    # https://gitter.im/nim-lang/Nim?at=5bd24373069fca52a5945a0b
+    # We need to first convert the
+    # ``event.queryStringParameters.name`` JsObject to cstring, and
+    # then convert that to Nim string using ``$``.
+    name: string = $(event.queryStringParameters.name.to(cstring))
+  if name == "":
+    name = "World"
 
   return js{
     statusCode: 200,
-    body: cstring"Hello, " & name & cstring"! From Nim."
+    # Finally convert it to cstring before returning the string as
+    # part of that ``js`` object.
+    body: cstring("Hello, " & name & "! From Nim.")
     }
 
 # https://nim-lang.org/docs/asyncjs.html
