@@ -25,9 +25,8 @@ let
   greeting = process.env.GREETING
   greetingStr = $(greeting.to(cstring))
 
-console.log(greeting)
-
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
+  console.log(greeting)
   return js{
     statusCode: 200,
     body: cstring(greetingStr)
