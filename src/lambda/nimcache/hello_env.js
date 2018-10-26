@@ -101,27 +101,27 @@ var out_of_mem_hook_318826 = [null];
 var object_id_446245 = [0];
 async function HEX3Aanonymous_463105(event_463107, context_463108) {
 
-		function inner_463152() {
-			var result_463154 = null;
+		function inner_463208() {
+			var result_463210 = null;
 
 			var F={procname:":anonymous.inner",prev:framePtr,filename:"../../../../../stow/pkgs/nim/devel/lib/js/jsffi.nim",line:0};
 			framePtr = F;
 			BeforeRet: do {
 				F.line = 423;
-				var a_463155 = null;
+				var a_463211 = null;
 				F.line = 424;
-				a_463155 = {};
+				a_463211 = {};
 				F.line = 434;
-				a_463155.statusCode = 200;
+				a_463211.statusCode = 200;
 				F.line = 434;
-				a_463155.body = toJSStr(greeting_str_463044);
+				a_463211.body = toJSStr(greeting_str_463044);
 				F.line = 443;
-				result_463154 = a_463155;
+				result_463210 = a_463211;
 				break BeforeRet;
 			} while (false);
 			framePtr = F.prev;
 
-			return result_463154;
+			return result_463210;
 
 		}
 
@@ -130,8 +130,11 @@ async function HEX3Aanonymous_463105(event_463107, context_463108) {
 	var F={procname:"hello_env.:anonymous",prev:framePtr,filename:"hello_env.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 31;
-		result_463119 = inner_463152();
+		console.log(("Hello!"));
+		console.log(("event"), (event_463107));
+		console.log(("context"), (context_463108));
+		F.line = 34;
+		result_463119 = inner_463208();
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;

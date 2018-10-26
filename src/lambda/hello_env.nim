@@ -28,6 +28,9 @@ let
 console.log(greeting)
 
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
+  console.log("Hello!")
+  console.log("event", event)
+  console.log("context", context)
   return js{
     statusCode: 200,
     body: cstring(greetingStr)
