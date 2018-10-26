@@ -99,7 +99,7 @@ var out_of_mem_hook_318826 = [null];
     };
   }
 var object_id_446245 = [0];
-async function HEX3Aanonymous_463085(event_463087, context_463088) {
+async function HEX3Aanonymous_463105(event_463107, context_463108) {
 
 		function inner_463152() {
 			var result_463154 = null;
@@ -125,21 +125,21 @@ async function HEX3Aanonymous_463085(event_463087, context_463088) {
 
 		}
 
-	var result_463099 = null;
+	var result_463119 = null;
 
 	var F={procname:"hello_env.:anonymous",prev:framePtr,filename:"hello_env.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		console.log((greeting_463034));
-		F.line = 30;
-		result_463099 = inner_463152();
+		F.line = 31;
+		result_463119 = inner_463152();
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
 
-	return result_463099;
+	return result_463119;
 
 }
 var greeting_463034 = process.env.GREETING;
 var greeting_str_463044 = cstrToNimstr((greeting_463034));
-exports.handler = HEX3Aanonymous_463085;
+console.log((greeting_463034));
+exports.handler = HEX3Aanonymous_463105;
