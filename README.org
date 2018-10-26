@@ -4,7 +4,7 @@ Hi there! This is a playground repo to test out [[https://www.netlify.com/docs/f
 Functions]].  You can see a live demo of the examples at
 https://functions-playground.netlify.com.
 
-- Netlify Functions Playground source :: [[https://github.com/netlify/netlify-functions-example][GitHub]]
+- Netlify Functions Playground source: [[https://github.com/netlify/netlify-functions-example][GitHub]]
 * Nim source code
 The Nim source code is in the [[./src/lambda][*src/lambda*]] directory.
 * Generate JS code
