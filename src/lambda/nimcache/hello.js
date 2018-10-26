@@ -27,38 +27,42 @@ var out_of_mem_hook_318826 = [null];
   }
 var object_id_446245 = [0];
 
-function HEX3Aanonymous_462015(event_462017, context_462018, callback_462023) {
+function HEX3Aanonymous_462057(event_462059, context_462060, callback_462065) {
 
-		function inner_462045() {
-			var result_462047 = null;
+		function inner_462115() {
+			var result_462117 = null;
 
 			var F={procname:":anonymous.inner",prev:framePtr,filename:"../../../../../stow/pkgs/nim/devel/lib/js/jsffi.nim",line:0};
 			framePtr = F;
 			BeforeRet: do {
 				F.line = 423;
-				var a_462048 = null;
+				var a_462118 = null;
 				F.line = 424;
-				a_462048 = {};
+				a_462118 = {};
 				F.line = 434;
-				a_462048.statusCode = 200;
+				a_462118.statusCode = 200;
 				F.line = 434;
-				a_462048.body = "Hello, World! From Nim.";
+				a_462118.body = "Hello, World! From Nim.";
 				F.line = 443;
-				result_462047 = a_462048;
+				result_462117 = a_462118;
 				break BeforeRet;
 			} while (false);
 			framePtr = F.prev;
 
-			return result_462047;
+			return result_462117;
 
 		}
 
 	var F={procname:"hello.:anonymous",prev:framePtr,filename:"hello.nim",line:0};
 	framePtr = F;
-		F.line = 6;
-		callback_462023(null, inner_462045());
+		console.log(("Hello3"));
+		console.log(("Hello4"));
+		F.line = 15;
+		callback_462065(null, inner_462115());
 	framePtr = F.prev;
 
 	
 }
-exports.handler = HEX3Aanonymous_462015;
+console.log(("Hello1"));
+console.log(("Hello2"));
+exports.handler = HEX3Aanonymous_462057;
