@@ -4,7 +4,6 @@ var exports {.importc.}: js
 var process {.importc.}: js
 
 # https://nim-lang.github.io/Nim/jsffi.html
-var console {. importc, nodecl .}: JsObject # For debug
 
 let
   # The GREETING env var *has* to be set in the Netlify console, else you get this error:
@@ -23,14 +22,16 @@ let
   #    ]
   # }
   greeting = process.env.GREETING
-  greetingStr = $(greeting.to(cstring))
-
-console.log(greeting)
 
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
-  console.log("Hello!")
-  console.log("event", event)
-  console.log("context", context)
+  let
+    greetingStr = if (greeting == jsNull):
+                    "GREETING environment variable was null"
+                  elif (greeting == jsUndefined):
+                    "GREETING environment variable was undefined"
+                  else:
+                    $(greeting.to(cstring))
+
   return js{
     statusCode: 200,
     body: cstring(greetingStr)
