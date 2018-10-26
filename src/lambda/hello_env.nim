@@ -3,6 +3,9 @@ import jsffi, asyncjs
 var exports {.importc.}: js
 var process {.importc.}: js
 
+# https://nim-lang.github.io/Nim/jsffi.html
+var console {. importc, nodecl .}: JsObject # For debug
+
 let
   # The GREETING env var *has* to be set in the Netlify console, else you get this error:
   # {
@@ -19,10 +22,13 @@ let
   #       "require (internal/module.js:11:18)"
   #    ]
   # }
-  greeting = $(process.env.GREETING.to(cstring))
+  greeting = process.env.GREETING
+  greetingStr = $(greeting.to(cstring))
+
+console.log(greeting)
 
 exports.handler = proc(event: js, context: js): Future[js] {.async.} =
   return js{
     statusCode: 200,
-    body: cstring(greeting)
+    body: cstring(greetingStr)
     }
