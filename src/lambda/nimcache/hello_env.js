@@ -260,27 +260,27 @@ function nimCopyAux(dest_322635, src_322636, n_322638) {
 async function HEX3Aanonymous_463074(event_463076, context_463077) {
 		var Tmp1;
 
-		function inner_463151() {
-			var result_463153 = null;
+		function inner_463141() {
+			var result_463143 = null;
 
 			var F={procname:":anonymous.inner",prev:framePtr,filename:"../../../../../stow/pkgs/nim/devel/lib/js/jsffi.nim",line:0};
 			framePtr = F;
 			BeforeRet: do {
 				F.line = 423;
-				var a_463154 = null;
+				var a_463144 = null;
 				F.line = 424;
-				a_463154 = {};
+				a_463144 = {};
 				F.line = 434;
-				a_463154.statusCode = 200;
+				a_463144.statusCode = 200;
 				F.line = 434;
-				a_463154.body = toJSStr(greeting_str_463129);
+				a_463144.body = toJSStr(greeting_str_463119);
 				F.line = 443;
-				result_463153 = a_463154;
+				result_463143 = a_463144;
 				break BeforeRet;
 			} while (false);
 			framePtr = F.prev;
 
-			return result_463153;
+			return result_463143;
 
 		}
 
@@ -289,21 +289,17 @@ async function HEX3Aanonymous_463074(event_463076, context_463077) {
 	var F={procname:"hello_env.:anonymous",prev:framePtr,filename:"hello_env.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 28;
+		F.line = 11;
 		if ((greeting_463033 == null)) {
 		Tmp1 = makeNimstrLit("GREETING environment variable was null");
 		}
 		else {
-		if ((greeting_463033 == undefined)) {
-		Tmp1 = makeNimstrLit("GREETING environment variable was undefined");
-		}
-		else {
 		Tmp1 = cstrToNimstr((greeting_463033));
 		}
-		}
-		var greeting_str_463129 = nimCopy(null, Tmp1, NTI305040);
-		F.line = 35;
-		result_463088 = inner_463151();
+		
+		var greeting_str_463119 = nimCopy(null, Tmp1, NTI305040);
+		F.line = 16;
+		result_463088 = inner_463141();
 		break BeforeRet;
 	} while (false);
 	framePtr = F.prev;
