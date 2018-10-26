@@ -73,32 +73,35 @@
              </form>
              <p><a href="/.netlify/functions/hello_name_post?name=Me">Show me the error</a></p>
              </article>
+        -->
 
-             <article>
-             <h2>Read environment variables</h2>
-             <p>
-             Storing secrets like API tokens can be tricky in web apps.
-             Lambdas and environment variables to the rescue!
-             </p>
-             <p>
-             For this example, I’m using
-             <a href="https://www.npmjs.com/package/dotenv">dotenv</a>
-             to define environment variables locally (in a real project, I wouldn’t
-             commit that file to the repository!), and defining those same variables
-             in the Netlify site dashboard under
-             Settings > Build & deploy > Build environment variables, for production.
-             </p>
-             <p>
-             Note: environment variables get baked into your function at deploy
-             time, so you need to trigger a new deploy after you change them.
-             </p>
-             <pre class="language-js"><code><%= require('html-loader!./lambda/hello_env.js') %></code></pre>
-             <h3>Try it out</h3>
-             <p>
-             <a href="/.netlify/functions/hello_env">Show me the environment variable</a>
-             </p>
-             </article>
+        <article>
+            <h2>Read environment variables</h2>
+            <p>
+                Storing secrets like API tokens can be tricky in web apps.
+                Lambdas and environment variables to the rescue!
+            </p>
+            <p>
+                For this example, I’m defining environment variable
+                "GREETING" in the Netlify site dashboard under
+                Settings > Build & deploy > Build environment
+                variables.
+            </p>
+            <p>
+                Note: environment variables get baked into your function at deploy
+                time, so you need to trigger a new deploy after you change them.
+            </p>
+            <ul>
+                <li><a href="/lambda/hello_env.nim">Source Nim code</a></li>
+                <li><a href="/lambda/nimcache/hello_env.js">JS generated from Nim code</a></li>
+            </ul>
+            <h3>Try it out</h3>
+            <p>
+                <a href="/.netlify/functions/hello_env">Show me the environment variable</a>
+            </p>
+        </article>
 
+        <!--
              <article>
              <h2>Fetch</h2>
              <p>I see you like APIs! I’ll put an API in your API so you can API while you API.</p>
