@@ -24,7 +24,7 @@ exports.handler = proc(event: js, context: js): Future[js] {.async.} =
   if httpMethod != "POST":
     return js{
       statusCode: 405,
-      body: "Method Not Allowed"
+      body: cstring"Method Not Allowed"
     }
 
   let

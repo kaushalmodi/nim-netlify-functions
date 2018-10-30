@@ -287,7 +287,7 @@ async function HEX3Aanonymous_301056(event_301058, context_301059) {
 				F.line = 434;
 				a_301130.statusCode = 405;
 				F.line = 434;
-				a_301130.body = makeNimstrLit("Method Not Allowed");
+				a_301130.body = "Method Not Allowed";
 				F.line = 443;
 				result_301129 = a_301130;
 				break BeforeRet;
