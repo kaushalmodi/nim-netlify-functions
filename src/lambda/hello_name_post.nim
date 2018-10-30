@@ -3,8 +3,9 @@ import jsffi, asyncjs
 # import querystring from "querystring";
 # https://gitter.im/nim-lang/Nim?at=5bd38b49ae7be94016bfc95d
 # proc importJS(importName: cstring, moduleName: cstring) {.importcpp: "import # from '#'".}
-proc importJS(importName: cstring, moduleName: cstring) {.importcpp: "import # from #".}
-importJS("querystring", "querystring")
+# proc importJS(importName: cstring, moduleName: cstring) {.importcpp: "import # from #".}
+# importJS("querystring", "querystring")
+{. emit: """import querystring from "querystring";""" .}
 var querystring {.importc.}: js
 
 var exports {.importc.}: js
