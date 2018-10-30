@@ -224,7 +224,6 @@ var out_of_mem_hook_157026 = [null];
     };
   }
 var object_id_284245 = [0];
-import querystring from "querystring";
 
 function is_fat_pointer_160801(ti_160803) {
 	var result_160804 = false;
@@ -328,24 +327,24 @@ async function HEX3Aanonymous_301056(event_301058, context_301059) {
 	var F={procname:"hello_name_post.:anonymous",prev:framePtr,filename:"hello_name_post.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 16;
+		F.line = 23;
 		var http_method_301103 = cstrToNimstr((event_301058.httpMethod));
 		if (!(eqStrings(http_method_301103, makeNimstrLit("POST")))) {
-		F.line = 18;
+		F.line = 25;
 		result_301070 = inner_301127();
 		break BeforeRet;
 		}
 		
-		F.line = 24;
-		var params_301463 = querystring.parse((event_301058.body));
-		F.line = 26;
+		F.line = 31;
+		var params_301463 = querystring_301014.parse((event_301058.body));
+		F.line = 33;
 		var name_301478 = cstrToNimstr((params_301463.name));
 		if (eqStrings(name_301478, [])) {
-		F.line = 28;
+		F.line = 35;
 		name_301478 = nimCopy(null, makeNimstrLit("World"), NTI143040);
 		}
 		
-		F.line = 30;
+		F.line = 37;
 		result_301070 = inner_301487();
 		break BeforeRet;
 	} while (false);
@@ -354,4 +353,5 @@ async function HEX3Aanonymous_301056(event_301058, context_301059) {
 	return result_301070;
 
 }
+var querystring_301014 = require("querystring");
 exports.handler = HEX3Aanonymous_301056;
