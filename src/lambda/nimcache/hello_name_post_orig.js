@@ -1,4 +1,4 @@
-const qs = require("querystring");
+const querystring = require("querystring");
 
 exports.handler = async (event, context) => {
   // Only allow POST
