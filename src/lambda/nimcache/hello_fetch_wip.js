@@ -53,7 +53,7 @@ async function HEX3Aanonymous_488046(event_488048, context_488049) {
 
 	var result_488059 = null;
 
-	var F={procname:"hello_fetch.:anonymous",prev:framePtr,filename:"hello_fetch.nim",line:0};
+	var F={procname:"hello_fetch_wip.:anonymous",prev:framePtr,filename:"hello_fetch_wip.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
 		F.line = 17;
